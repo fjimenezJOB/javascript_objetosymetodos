@@ -23,6 +23,13 @@ var botella = {
             // Si ya estaba abierta, la dejamos abierta y se lo decimos al usuario.
             console.log('La botella ya està abierta');
         }
+    },
+    cerrarBotella: function () {
+        if(this.abierta === true) {
+            console.log('Has cerrado la botella');
+        } else if (this.abuerta === false) {
+            console.log('La botella ya està cerrada');
+        }
     }
 }
 
@@ -124,6 +131,14 @@ var lampara = {
         } else if (this.encendido === true){
             // Si ya estaba encendida se lo decimos al usuario.
             console.log('La lampara está encendida');
+        }
+    },
+    apagar : function(){
+        if (this.encendido === true){
+            console.log('Has apagado la lampara');
+            this.encendido = false;
+        } else {
+            console.log('La lampara está encendida !!');
         }
     },
     cambiarColor : function (color) {
